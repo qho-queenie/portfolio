@@ -1,0 +1,51 @@
+
+<header id="fh5co-header" class="fh5co-cover" role="banner" data-stellar-background-ratio="1">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7 text-left">
+				<div class="display-t">
+					<div class="display-tc animate-box" data-animate-effect="fadeInUp">
+asdfjal
+						<h1 id="queenie"></h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+
+<script>
+    window.onload = function() {
+
+
+        var words = ["Javascript", "HTML5", "CSS3", "Python", "Swift", "MySql", "MongoDB", "Angular", "jQuery", "Flask", "Pylot", "Node.js", "Express.js", "Bootstrap", "xCode", "Skate"],
+
+        el = document.getElementById('queenie'),
+                word_counter = 0,
+                character_counter = 0;
+
+        function updateText(){
+            if (words[word_counter][character_counter] == " ")
+            {
+                el.innerHTML = el.innerHTML + ('&nbsp');
+            }
+            else{
+                el.innerHTML = el.innerHTML + words[word_counter][character_counter];
+            }
+            character_counter++;
+
+            if(character_counter == words[word_counter].length + 1)
+            {
+                word_counter++;
+                character_counter = 0;
+                el.innerHTML = '';
+                if(word_counter == words.length)
+                    word_counter = 0;
+                }
+            }
+        setInterval(updateText,150);
+    };
+
+</script>

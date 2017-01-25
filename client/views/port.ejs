@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Queenie | Fullstack | ios |</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="The YPC is composed of emerging leaders in the business community who are dedicated to promoting the level of health care in the County of Santa Clara and addressing the current health-related issues affecting the community. The focus of the Young Professional Council is to raise funds, volunteer, promote community awareness, and build partnerships with the local business community." />
+		<meta name="keywords" content="YPC, Young Professional Council, VMC Foundation, Santa Clara County, Santa Clara Valley Medical Center, Women and Children’s Center, Raise funds, volunteer, promote community awareness, build partnerships, young leaders, positive impact, network, goal, expand."/>
+		<link rel="icon" href="/static/images/logo/YPC.ico"/>
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+		<!-- jQuery -->
+		<script src="/static/js/jquery.min.js"></script>
+		<!-- jQuery Easing -->
+		<script src="/static/js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="/static/js/bootstrap.min.js"></script>
+		<!-- Waypoints -->
+		<script src="/static/js/jquery.waypoints.min.js"></script>
+		<!-- countTo -->
+		<script src="/static/js/jquery.countTo.js"></script>
+		<!-- Magnific Popup -->
+		<script src="/static/js/jquery.magnific-popup.min.js"></script>
+		<script src="/static/js/magnific-popup-options.js"></script>
+		<!-- Stellar -->
+		<script src="/static/js/jquery.stellar.min.js"></script>
+		<!-- Main -->
+		<script src="/static/js/main.js"></script>
+
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="/static/css/animate.css">
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="/static/css/icomoon.css">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="/static/css/bootstrap.css">
+
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="/static/css/magnific-popup.css">
+
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="/static/css/style.css">
+
+		<link rel="stylesheet" href="/static/fonts/devicon-master/devicon-colors.css">
+
+		<link rel="stylesheet" href="/static/fonts/devicon-master/devicon.css">
+
+		<!-- Modernizr JS -->
+		<script src="/static/js/modernizr-2.6.2.min.js"></script>
+		<script src="https://use.fontawesome.com/7f31552798.js"></script>
+	</head>
+
+	<body>
+		<div id="background"></div>
+		<div id="page">
+			<nav class="fh5co-nav" role="navigation">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2 text-left">
+							<div id="fh5co-logo"><a href="/">Queenie</a></div>
+						</div>
+						<div class="col-xs-10 text-right menu-1">
+							<ul>
+								<%- navBar %>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div class="about_me animate-box">
+		<h1><strong>portfolio</strong></h1>
+		<p>Here are some of my projects, some of which are deployed on Amazon Web Services</p>
+
+		<div id="projects">
+			<div class="project">
+				<a href="http://35.167.102.219/">FMFA inc.</a>
+				<p>(We are almost done!)</p>
+				<img caption = "fmafa" class="project_img" src="/static/images/fmfa_screenshot.png" width=40% height=40% alt="profile_picture">
+			</div>
+
+			<div class="project">
+				<img class="project_img" src="/static/images/ypc_screenshot.png" alt="profile_picture">
+			</div>
+
+		</div>
+
+		<div id="caption">
+
+		</div>
+
+
+	</body>
+
+<script>
+	var images = document.getElementsByClassName("project_img");
+	var fmfa = 'Worked as a Backend Developer for FMFA inc., which our team developed using MySQL, Node.js, Express.js, Angular.js, Bootstrap, some vanilla Javascript (because it is fun).';
+	var ypc = "Almost worked as a Backend Developer for YPC, Young Professional Council San Jose. Our team used MySQL, Node.js, Express.js, Angular.js, Bootstrap, LESS, Javascript, as well as Stripe payment API.";
+	var captions = [`${fmfa}`, `${ypc}` , "testtt"];
+	for (let count = 0; count < images.length; count++){
+		let image = images[count];
+		let size_toggle = false;
+		let small_size = .28;
+		image.height = small_size * window.innerHeight;
+		image.width = small_size * window.innerWidth;
+		image.onmouseup = function(){
+			document.getElementById("caption").innerHTML = ""
+			let height_per;
+			let width_per;
+			if (size_toggle == false){
+				size_toggle = true;
+				height_per = 0.8;
+				width_per = 0.8;
+			}
+			else{
+				size_toggle = false;
+				height_per = small_size;
+				width_per = small_size;
+			}
+			image.height = (height_per * window.innerHeight) + "";
+			image.width = (width_per * window.innerWidth) + "";
+		}
+		image.onmouseover = function(){
+			if (size_toggle == false){
+				document.getElementById("caption").innerText = captions[count];
+				// console.log(count);
+		}
+		}
+		image.onmouseout = function(){
+			document.getElementById("caption").innerText = ""
+		}
+	}
+</script>
+
+</html>
