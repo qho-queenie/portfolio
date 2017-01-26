@@ -76,11 +76,16 @@
 			<div class="project">
 				<a href="http://35.167.102.219/">FMFA inc.</a>
 				<p>(We are almost done!)</p>
-				<img caption = "fmafa" class="project_img" src="/static/images/fmfa_screenshot.png" width=40% height=40% alt="profile_picture">
+				<img caption = "fmafa" class="project_img" src="/static/images/fmfa_screenshot.png" width=40% height=40% alt="FMFA">
 			</div>
 
 			<div class="project">
-				<img class="project_img" src="/static/images/ypc_screenshot.png" alt="profile_picture">
+				<img class="project_img" src="/static/images/ypc_screenshot.png" alt="ypc">
+			</div>
+
+			<div class="project">
+				<a href="https://github.com/qho-queenie/directme"><p>View Direct Me on Github</p></a>
+				<img class="project_img" src="/static/images/directme.png" alt="Direct Me">
 			</div>
 
 		</div>
@@ -95,8 +100,9 @@
 <script>
 	var images = document.getElementsByClassName("project_img");
 	var fmfa = 'Worked as a Backend Developer for FMFA inc., which our team developed using MySQL, Node.js, Express.js, Angular.js, Bootstrap, some vanilla Javascript (because it is fun).';
-	var ypc = "Almost worked as a Backend Developer for YPC, Young Professional Council San Jose. Our team used MySQL, Node.js, Express.js, Angular.js, Bootstrap, LESS, Javascript, as well as Stripe payment API.";
-	var captions = [`${fmfa}`, `${ypc}` , "testtt"];
+	var ypc = "Also worked as a Backend Developer for YPC, Young Professional Council San Jose. Our team used MySQL, Node.js, Express.js, Angular.js, Bootstrap, LESS, Javascript, as well as Stripe payment API.";
+	var directme = "Direct Me is a web app that uses Flask, Pylot, Python, MySQL and 4 different APIs to provide suggestions to your daily activities. These APIs are Yelp, Open Weather Map, Twilio and Google Maps."
+	var captions = [`${fmfa}`, `${ypc}` ,`${directme}`];
 	for (let count = 0; count < images.length; count++){
 		let image = images[count];
 		let size_toggle = false;
