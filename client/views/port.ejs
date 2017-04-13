@@ -5,8 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Queenie | Fullstack | ios |</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="The YPC is composed of emerging leaders in the business community who are dedicated to promoting the level of health care in the County of Santa Clara and addressing the current health-related issues affecting the community. The focus of the Young Professional Council is to raise funds, volunteer, promote community awareness, and build partnerships with the local business community." />
-		<meta name="keywords" content="YPC, Young Professional Council, VMC Foundation, Santa Clara County, Santa Clara Valley Medical Center, Women and Children’s Center, Raise funds, volunteer, promote community awareness, build partnerships, young leaders, positive impact, network, goal, expand."/>
+
+
 		<link rel="icon" href="/static/images/logo/YPC.ico"/>
 
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
@@ -74,6 +74,16 @@
 
 		<div id="projects">
 			<div class="project">
+				<a href="https://github.com/qho-queenie/Fishbowl-Hackathon">Together- 1st place in hackathon in the Everyday Use Category</a>
+				<img class="project_img" src="/static/images/together.png" alt="together">
+			</div>
+
+			<div class="project">
+				<a href="https://usafesite.netlify.com/">USafe? iOS App</a>
+				<img class="project_img" src="/static/images/usafe1.png" style="width:30%;height:60%;" alt="usafe?">
+			</div>
+
+			<div class="project">
 				<a href="http://youngprofessionalcouncil.com/">Young Professional Council, San Jose.</a>
 				<img class="project_img" src="/static/images/ypc_screenshot.jpg" alt="ypc">
 			</div>
@@ -85,7 +95,7 @@
 			</div>
 
 			<div class="project">
-				<a href="https://github.com/qho-queenie/directme"><p>View Direct Me on Github</p></a>
+				<a href="https://github.com/qho-queenie/directme"><p>Direct Me- 2nd place in a Python Hackathon</p></a>
 				<img class="project_img" src="/static/images/directme.jpg" alt="Direct Me">
 			</div>
 
@@ -100,10 +110,12 @@
 
 <script>
 	var images = document.getElementsByClassName("project_img");
+	var together = "Together is an web app that uses restaurant data to fill in their slow hours with people wanting to meet new friends with a cause. Together is monetizable as it grows. Together came first place in at Fishbowl's Hackthon in the EveryDay Use category.";
+	var usafe = "iOS Engineer for uSafe?, which is an iOS application that helps keep you safe no matter where you go or what you do. It's especially useful for those who live alone. We are currently in Apple's TestFlight phase. It is also being feautured on Flowroute's blog https://blog.flowroute.com/";
 	var fmfa = 'Worked as a Full-Stack Developer for FMFA inc., which our team developed using MySQL, Node.js, Express.js, Angular.js, Bootstrap, some vanilla Javascript (because it is fun).';
-	var ypc = "Also worked as a Full-Stack Developer for YPC, Young Professional Council San Jose. Our team used MySQL, Node.js, Express.js, Angular.js, Bootstrap, LESS, Javascript, as well as Stripe payment API.";
-	var directme = "Direct Me is a web app that uses Flask, Pylot, Python, MySQL and 4 different APIs to provide suggestions to your daily activities. These APIs are Yelp, Open Weather Map, Twilio and Google Maps."
-	var captions = [`${ypc}`, `${fmfa}` ,`${directme}`];
+	var ypc = "Worked as a Full-Stack Developer for YPC, Young Professional Council San Jose. Our team used MySQL, Node.js, Express.js, Angular.js, Bootstrap, LESS, Javascript, as well as Stripe payment API.";
+	var directme = "Direct Me is a web app that uses Flask, Pylot, Python, MySQL and 4 different APIs to provide suggestions to your daily activities. These APIs are Yelp, Open Weather Map, Twilio and Google Maps. Direct Me has won 2nd place in a Python Hackathon."
+	var captions = [`${together}`,`${usafe}`,`${ypc}`, `${fmfa}` ,`${directme}`];
 	for (let count = 0; count < images.length; count++){
 		let image = images[count];
 		let size_toggle = false;
